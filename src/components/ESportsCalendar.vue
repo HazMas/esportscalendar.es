@@ -6,7 +6,7 @@
         <h2 class="esc-title">
           Todos tus E-sports
         </h2>
-        <p>En una sola app</p>
+        <p class="esc-subtitle">En una sola app</p>
       </div>
       <button>
         playstore
@@ -19,15 +19,15 @@
       <div class="esc-what-we-do">
         <div class="esc-what-we-do__cards">
           <div class="esc-what-we-do__card">
-            <img style="width:50px" class="logo-esports-calendar__img" src="../assets/icon-calendar.svg">
+            <img style="width:50px" class="" src="../assets/icon-calendar.svg">
             <p>Un calendario con todos los partidos</p>
           </div>
           <div class="esc-what-we-do__card">
-            <img style="width:50px" class="logo-esports-calendar__img" src="../assets/icon-clasification.svg">
+            <img style="width:50px" class="" src="../assets/icon-clasification.svg">
             <p>Las clasificaciones de tus ligas en directo</p>
           </div>
           <div class="esc-what-we-do__card">
-            <img style="width:50px" class="logo-esports-calendar__img" src="../assets/icon-notification.svg">
+            <img style="width:50px" class="" src="../assets/icon-notification.svg">
             <p>Notificaciones para que no te pierdas nada</p>
           </div>
         </div>
@@ -92,16 +92,34 @@ export default {
   background-size: cover;
   background-position: center 80%;
   border-bottom: 5px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .logo-esports-calendar__img{
-  width:200px;
+  height:25%;
   margin-top: 30px;
+  position:absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .esc-title{
   font-size: 90px;
   letter-spacing: 0;
   text-align: center;
   line-height: 80px;
+  text-transform: uppercase;
+  text-shadow: 0 0 30px rgba(255,255,255,0.87);
+  margin:0;
+}
+.esc-subtitle{
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 30px;
   text-transform: uppercase;
   text-shadow: 0 0 30px rgba(255,255,255,0.87);
 }
