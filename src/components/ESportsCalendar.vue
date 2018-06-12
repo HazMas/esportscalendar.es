@@ -4,7 +4,7 @@
       <div class="logo-esports-calendar">
         <img class="logo-esports-calendar__img" src="../assets/logo-esports-calendar.svg">
         <h2 class="esc-title">
-          Todos tus E-sports
+          Todos tus <span style="white-space: nowrap">E-sports</span>
         </h2>
         <p class="esc-subtitle">En una sola app</p>
       </div>
@@ -82,6 +82,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../assets/scss/_vars.scss";
 .Landing-view {
   height: 100%;
 }
@@ -106,13 +107,20 @@ export default {
   transform: translateX(-50%);
 }
 .esc-title{
+  margin:10% 0 0 0;
+  font-size: 50px;
+  text-transform: uppercase;
+  line-height: 58px;
+  text-shadow: 0 0 30px rgba(255,255,255,0.87);
+
+  @media (min-width: map-get($grid-breakpoints, md)){
   font-size: 90px;
   letter-spacing: 0;
   text-align: center;
   line-height: 80px;
   text-transform: uppercase;
   text-shadow: 0 0 30px rgba(255,255,255,0.87);
-  margin:0;
+  }
 }
 .esc-subtitle{
   font-size: 30px;
