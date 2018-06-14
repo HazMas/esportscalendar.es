@@ -17,29 +17,34 @@
     </header>
     <div class="esc-main">
       <div class="esc-what-we-do">
-        <div class="esc-what-we-do__cards">
+        <div class="esc-what-we-do__cards margins-grid">
           <div class="esc-what-we-do__card">
-            <img style="width:50px" class="" src="../assets/icon-calendar.svg">
-            <p>Un calendario con todos los partidos</p>
+            <img class="esc-what-we-do__icon" src="../assets/icon-calendar.svg">
+            <p class="font-size-l font-weight-sb">Un calendario con todos los partidos</p>
           </div>
           <div class="esc-what-we-do__card">
-            <img style="width:50px" class="" src="../assets/icon-clasification.svg">
-            <p>Las clasificaciones de tus ligas en directo</p>
+            <img class="esc-what-we-do__icon" src="../assets/icon-clasification.svg">
+            <p class="font-size-l font-weight-sb">Las clasificaciones de tus ligas en directo</p>
           </div>
           <div class="esc-what-we-do__card">
-            <img style="width:50px" class="" src="../assets/icon-notification.svg">
-            <p>Notificaciones para que no te pierdas nada</p>
+            <img class="esc-what-we-do__icon" src="../assets/icon-notification.svg">
+            <p class="font-size-l font-weight-sb">Notificaciones para que no te pierdas nada</p>
           </div>
         </div>
-        <button>Prueba la app</button>
+        <button class="esc-button">
+          <img src="../assets/esc-button.png">
+          <span>Prueba la app</span>
+        </button>
       </div>
       <div class="esc-competitions">
-        <h2>Sigue tus competiciones favoritas</h2>
-        <p>Todas las jornadas y todos los partidos ordenados y con clasificaciones en directo</p>
-        <div class="esc-competitions__shields">
-          <img style="width:100px" class="esc-competitions-shield" src="../assets/ligas/superliga-orange.png">
-          <img style="width:100px" class="esc-competitions-shield" src="../assets/ligas/esl-masters.png">
-          <img style="width:100px" class="esc-competitions-shield" src="../assets/ligas/copa-apertura.png">
+        <div class="margins-grid">
+          <h2 class="font-size-xl uppercase">Sigue tus competiciones favoritas</h2>
+          <p class="esc-competitions-subtitle">Todas las jornadas y todos los partidos ordenados y con clasificaciones en directo</p>
+          <div class="esc-competitions__shields">
+            <img class="esc-competitions__shield" src="../assets/ligas/superliga-orange.png">
+            <img class="esc-competitions__shield" src="../assets/ligas/esl-masters.png">
+            <img class="esc-competitions__shield" src="../assets/ligas/copa-apertura.png">
+          </div>
         </div>
       </div>
       <div class="esc-app-screens">
@@ -135,13 +140,89 @@ export default {
   background-image: url(../assets/ESportsCalendar-whatwedo.png);
   background-position: 50% 50%;
   background-size: cover;
+  padding-top: 5%;
+  padding-bottom: 10%;
 }
 .esc-what-we-do__cards {
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
+  padding: 10% 10px;
+  @media (min-width: map-get($grid-breakpoints, sm)){
+    flex-direction: row;
+  }
+}
+.esc-what-we-do__card{
+  padding: 10% 10px;
+  @media (min-width: map-get($grid-breakpoints, sm)){
+  padding: 0 10px;
+  }
+}
+.esc-what-we-do__icon{
+  width:100px;
+  margin-bottom: 20px;
+  @media (min-width: map-get($grid-breakpoints, sm)){
+    height:40%;
+    margin-bottom: 5px;
+  }
+  @media (min-width: map-get($grid-breakpoints, md)){
+    height:80%;
+  }
+}
+.esc-button {
+  background-color: transparent;
+  border: none;
+  font-size: 28px;
+  color: #2E3656;
+  text-align: center;
+  position: relative;
+  z-index: 20;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 50px;
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    transform: translateY(2px);
+  }
+}
+.esc-button img {
+  position: absolute;
+  top: -84px;
+  left: -84px;
+  z-index: -1;
+  pointer-events: none;
 }
 .esc-competitions {
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-image: linear-gradient(180deg, #19213F 0%, #12152B 45%, #101328 100%);
+}
+.esc-competitions-subtitle {
+  padding-top: 20px;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+   @media (min-width: map-get($grid-breakpoints, sm)){
+     font-size: 18px;
+    line-height: 22px;
+   }
+   @media (min-width: map-get($grid-breakpoints, md)){
+     font-size: 24px;
+    line-height: 28px;
+   }
+}
+.esc-competitions__shields {
+  display: grid;
+  padding-top: 50px;
+  padding-top: 50px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.esc-competitions__shield{
+  height: 150px;
+  margin: 0 auto;
 }
 .esc-app-screens {
   background-image: url(../assets/ESportsCalendar-bg-lol.png);
