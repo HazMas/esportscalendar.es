@@ -8,11 +8,11 @@
         </h2>
         <p class="esc-subtitle">En una sola app</p>
       </div>
-      <button>
-        playstore
-      </button>
-      <div>
-        indicador de scroll
+      <a class="esc-playsotre" href="https://play.google.com/store/apps/details?id=esc.e_sportscalendar_v2">
+        <img src="../assets/esc-playstore.svg" alt="Aplicación que permite consultar los horarios, resultados e información de los equipos de tus competiciones de e-sports favoritas.">
+      </a>
+      <div class="esc-header__scroll-down">
+        <img src="../assets/scroll-down.svg">
       </div>
     </header>
     <div class="esc-main">
@@ -72,19 +72,22 @@
               <div class="esc-footer__data-contact-links">
                 <a href="https://twitter.com/E_SportsApp"><img src="../assets/twitter.svg" alt="Twitter de ESports Calendar"></a>
               </div>
+              <a class="esc-playsotre" href="https://play.google.com/store/apps/details?id=esc.e_sportscalendar_v2">
+                <img src="../assets/esc-playstore.svg" alt="Aplicación que permite consultar los horarios, resultados e información de los equipos de tus competiciones de e-sports favoritas.">
+              </a>
             </div>
           </div>
           <div class="esc-footer__terms">
-          <a href="">Política de privacidad</a>
-          <a href="">términos de uso</a>
+            <a href="">Política de privacidad</a>
+            <span>|</span>
+            <a href="">términos de uso</a>
           </div>
-          <button>
-          playstore
-          </button>
-          <p>Con la colaboración de:</p>
-          <img src="../assets/ayto-gijon.svg">
-          <img src="../assets/gijon-impulsa.svg">
-          <a href="">Esportscalendar.app</a>
+            <p class="esc-footer__collaborations-title font-size-l">Con la colaboración de:</p>
+          <div class="esc-footer__collaborations text-align-l">
+            <a href="https://www.gijon.es/"><img src="../assets/ayto-gijon.svg"></a>
+            <a href="https://impulsa.gijon.es/"><img src="../assets/gijon-impulsa.svg"></a>
+            <a class="esc-footer__app-link font-size-xl" href="https://esportscalendar.es/">Esportscalendar.app</a>
+          </div>
         </div>
       </div>
     </div>
@@ -116,6 +119,14 @@ export default {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+.esc-playsotre img{
+  &:active {
+    transform: translateY(2px);
+  }
+  &:hover {
+    box-shadow: 0 0 14px 0 rgba(37,232,190,0.50);
+  }
 }
 .logo-esports-calendar__img{
   height:25%;
@@ -149,6 +160,13 @@ export default {
   line-height: 30px;
   text-transform: uppercase;
   text-shadow: 0 0 30px rgba(255,255,255,0.87);
+}
+.esc-header__scroll-down {
+  position: absolute;
+  bottom: 20px;
+}
+.esc-header__scroll-down img {
+  height: 80px;
 }
 .esc-what-we-do {
   background-image: url(../assets/ESportsCalendar-whatwedo.png);
@@ -253,7 +271,8 @@ export default {
   grid-template-columns: repeat(3, 1fr);
 }
 .esc-competitions__shield{
-  height: 150px;
+  width:100%;
+  max-width: 150px;
   margin: 0 auto;
 }
 .esc-app-screens {
@@ -312,5 +331,42 @@ export default {
 }
 .esc-footer__data-contact-links {
   padding-top: 20px;
+  padding-bottom: 20px;
+}
+.esc-footer__terms {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.esc-footer__terms a{
+color: #fff;
+padding-left: 10px;
+padding-right: 10px;
+}
+.esc-footer__collaborations{
+  display: flex;
+  align-items: center;
+}
+.esc-footer__collaborations-title {
+  display: block;
+  text-align: left;
+}
+.esc-footer__collaborations a{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  &:active {
+    transform: translateY(2px);
+  }
+}
+.esc-footer__app-link {
+  margin-left: auto;
+  color: #fff;
+  text-decoration: none;
+  &:active {
+    transform: translateY(2px);
+  }
+  &:hover {
+    color: #25E8BE;
+    text-shadow: 0 0 14px rgba(37,232,190,0.50);
+  }
 }
 </style>

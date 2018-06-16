@@ -77,10 +77,14 @@ html{
   padding-bottom:calc(50px + 5%);
 }
 .text-align-l {
+   @media (min-width: map-get($grid-breakpoints, sm)){
   text-align: left;
+   }
 }
 .text-align-r {
-  text-align: right;
+   @media (min-width: map-get($grid-breakpoints, sm)){
+    text-align: right;
+   }
 }
 .margin-t-auto {
   margin-top: auto;
