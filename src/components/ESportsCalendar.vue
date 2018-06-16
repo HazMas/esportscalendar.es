@@ -86,7 +86,7 @@
           <div class="esc-footer__collaborations text-align-l">
             <a href="https://www.gijon.es/"><img src="../assets/ayto-gijon.svg"></a>
             <a href="https://impulsa.gijon.es/"><img src="../assets/gijon-impulsa.svg"></a>
-            <a class="esc-footer__app-link font-size-xl" href="https://esportscalendar.es/">Esportscalendar.app</a>
+            <a class="esc-footer__app-link font-size-l" href="https://esportscalendar.es/">Esportscalendar.app</a>
           </div>
         </div>
       </div>
@@ -345,6 +345,11 @@ padding-right: 10px;
 .esc-footer__collaborations{
   display: flex;
   align-items: center;
+  flex-direction: column;
+  text-align: center;
+  @media (min-width: map-get($grid-breakpoints, sm)){
+  flex-direction: row;
+  }
 }
 .esc-footer__collaborations-title {
   display: block;
@@ -358,7 +363,6 @@ padding-right: 10px;
   }
 }
 .esc-footer__app-link {
-  margin-left: auto;
   color: #fff;
   text-decoration: none;
   &:active {
@@ -367,6 +371,9 @@ padding-right: 10px;
   &:hover {
     color: #25E8BE;
     text-shadow: 0 0 14px rgba(37,232,190,0.50);
+  }
+  @media (min-width: map-get($grid-breakpoints, sm)){
+  margin-left: auto;
   }
 }
 </style>
