@@ -72,4 +72,17 @@ html{
 .font-weight-sb {
   font-weight: 600;
 }
+.padding-y-05-50 {
+  padding-top:calc(50px + 5%);
+  padding-bottom:calc(50px + 5%);
+}
+.text-align-l {
+  text-align: left;
+}
+.text-align-r {
+  text-align: right;
+}
+.margin-t-auto {
+  margin-top: auto;
+}
 </style>
